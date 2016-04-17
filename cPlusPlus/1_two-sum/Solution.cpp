@@ -27,6 +27,7 @@ class Solution{
 
 int main(){
 	Solution mytest = new Solution();
+
 	vector<int> test_1;
 	test_1.push_back(3);
 	test_1.push_back(2);
