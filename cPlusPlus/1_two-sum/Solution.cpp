@@ -26,5 +26,12 @@ class Solution{
 };
 
 int main(){
+	Solution mytest = new Solution();
+	vector<int> test_1;
+	test_1.push_back(3);
+	test_1.push_back(2);
+	test_1.push_back(4);
+
+	vector<int> result_1 = mytest.twoSum(test_1, 6);
 	return 0;
 }
