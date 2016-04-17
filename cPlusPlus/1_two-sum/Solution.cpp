@@ -1,24 +1,27 @@
 #include<iostream>
+#include<map>
 #include<vector>
 using namespace std;
+
+typedef map<int, int> HashTable;
+typedef HashTable::iterator Iterator;
 
 class Solution{
 	public:
 		vector<int> twoSum(vector<int>& nums, int target){
 			int length = nums.size();
 			vector<int> result;
-			if(length < 2){
-				return result;
+			HashTable hashTable;
+			for(size_t i = 0; i < length; i++){
+				hashTable.insert(HashTable::value_type(nums.at(i), i));
 			}
-			else{
-				for(int firstPointer = 0; firstPointer < length; firstPointer++){
-					for(int secondPointer = firstPointer + 1; secondPointer < length; secondPointer++){
-						if(nums.at(firstPointer) + nums.at(secondPointer) == target){
-							result.push_back(firstPointer);
-							result.push_back(secondPointer);
-							return result;
-						}
-					}
+			for(size_t i = 0; i < length; i++){
+				int firstPointer = nums.at(i);
+				Iterator iter = hashTable.find(target - firstPointer);
+				if(iter != hashTable.end() && iter->second != i){
+					result.push_back(i);
+					result.push_back(iter->second);
+					return result;
 				}
 			}
 			return result;
@@ -34,5 +37,8 @@ int main(){
 	test_1.push_back(4);
 
 	vector<int> result_1 = mytest->twoSum(test_1, 6);
+	if(result_1.size() == 2){
+		cout << result_1.at(0) << "," << result_1.at(1) << endl;
+	}
 	return 0;
 }
