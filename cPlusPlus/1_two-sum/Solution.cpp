@@ -1,18 +1,18 @@
-#nclude<iostream>
+#include<iostream>
 #include<vector>
 using namespace std;
 
 class Solution{
 	public:
-		vector<int> twoSum(vector<int& nums, int target){
+		vector<int> twoSum(vector<int>& nums, int target){
 			int length = nums.size();
 			vector<int> result;
 			if(length < 2){
-				return;
+				return result;
 			}
 			else{
-				for(auto firstPointer = 0; firstPointer <= length; firstPointer++){
-					for(auto secondPointer = firstPointer + 1; secondPointer <= length; secondPointer++){
+				for(int firstPointer = 0; firstPointer < length; firstPointer++){
+					for(int secondPointer = firstPointer + 1; secondPointer < length; secondPointer++){
 						if(nums.at(firstPointer) + nums.at(secondPointer) == target){
 							result.push_back(firstPointer);
 							result.push_back(secondPointer);
@@ -21,18 +21,18 @@ class Solution{
 					}
 				}
 			}
-			return;
+			return result;
 		}
 };
 
 int main(){
-	Solution mytest = new Solution();
+	Solution* mytest = new Solution();
 
 	vector<int> test_1;
 	test_1.push_back(3);
 	test_1.push_back(2);
 	test_1.push_back(4);
 
-	vector<int> result_1 = mytest.twoSum(test_1, 6);
+	vector<int> result_1 = mytest->twoSum(test_1, 6);
 	return 0;
 }
