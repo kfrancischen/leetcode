@@ -19,5 +19,5 @@ class Solution(object):
 mytest = Solution()
 
 s = [1,1,2,3]
-val = 3
+val = 2
 print mytest.removeElement(s, val)
