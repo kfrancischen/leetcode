@@ -18,5 +18,5 @@ class Solution:
 
 mytest = Solution()
 n = 5
-k = 5
+k = 4
 print mytest.getPermutation(n, k)
