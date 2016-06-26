@@ -13,6 +13,5 @@ class Solution(object):
 				return
 
 mytest = Solution()
-print mytest.twoSum([1,2],3)
 print mytest.twoSum([1,2,3],3)
 print mytest.twoSum([3,2,1],3)
