@@ -19,9 +19,8 @@ class Trie(object):
         :rtype: void
         """
         pointer = self.root
-        for i in range(0, len(word)):
-            letter = word[:i + 1]
-            if letter not in pointer.childrenDic.keys():
+        for letter in word:
+            if letter not in pointer.childrenDic:
                 newNode = TrieNode()
                 pointer.childrenDic[letter] = newNode
             pointer = pointer.childrenDic[letter]
@@ -35,9 +34,8 @@ class Trie(object):
         :rtype: bool
         """
         pointer = self.root
-        for i in range(0, len(word)):
-            letter = word[:i + 1]
-            if letter not in pointer.childrenDic.keys():
+        for letter in word:
+            if letter not in pointer.childrenDic:
                 return False
             pointer = pointer.childrenDic[letter]
         return pointer.word
@@ -51,9 +49,8 @@ class Trie(object):
         :rtype: bool
         """
         pointer = self.root
-        for i in range(0, len(prefix)):
-            letter = prefix[:i + 1]
-            if letter not in pointer.childrenDic.keys():
+        for letter in prefix:
+            if letter not in pointer.childrenDic:
                 return False
             pointer = pointer.childrenDic[letter]
         return True
