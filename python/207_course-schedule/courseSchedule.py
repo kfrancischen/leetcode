@@ -18,9 +18,9 @@ class Solution(object):
 
 
     def visit(self, course, visited):
-        if visited[course] == -1:
+        if visited[course] == -1:# -1 means it is being visited
             return False
-        if visited[course] == 1:
+        if visited[course] == 1: # 1 means it has been visited
             return True
 
         visited[course] = -1
