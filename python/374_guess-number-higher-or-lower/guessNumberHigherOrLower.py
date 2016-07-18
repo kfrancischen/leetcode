@@ -15,7 +15,6 @@ class Solution(object):
             mid = (l + r) / 2
             if guess(mid) == 0:
                 return mid
-
             elif guess(mid) == -1:
                 r = mid - 1
             elif guess(mid) == 1:
