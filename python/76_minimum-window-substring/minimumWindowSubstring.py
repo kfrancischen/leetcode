@@ -20,6 +20,7 @@ class Solution(object):
 
         return s[I:J]
 
+
 mytest = Solution()
 s = "ADOBECODEBANC"
 t = "ABC"
