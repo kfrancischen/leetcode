@@ -11,7 +11,6 @@ class Solution(object):
                 temp = s[j:i]
                 if temp == temp[::-1]:
                     dp[i] = min(dp[i], dp[j] + 1)
-
         return dp[n]
 
 mytest = Solution()
