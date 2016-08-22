@@ -32,9 +32,8 @@ class DoubleLL(object):
 
 class LRUCache(object):
 
-    def __init__(self, size):
-        self.queue, self.dic, self.size, self.n = DoubleLL(), {}, size, 0
-
+    def __init__(self, capacity):
+        self.queue, self.dic, self.size, self.n = DoubleLL(), {}, capacity, 0
 
     def get(self, key):
         if key in self.dic:
