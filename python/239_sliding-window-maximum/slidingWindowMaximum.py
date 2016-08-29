@@ -14,6 +14,7 @@ class Solution(object):
             d.append(i)
             if d[0] == i-k:
                 d.popleft()
+                
             if i >= k - 1:
                 out.append(nums[d[0]])
         return out
