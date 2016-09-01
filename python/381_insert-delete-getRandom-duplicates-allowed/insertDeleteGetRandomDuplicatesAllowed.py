@@ -28,9 +28,10 @@ class RandomizedCollection(object):
         if self.idx[val]:
             out, ins = self.idx[val].pop(), self.vals[-1]
             self.vals[out] = ins
-            if self.idx[ins]:
-                self.idx[ins].add(out)
-                self.idx[ins].discard(len(self.vals) - 1)
+
+            self.idx[ins].add(out)
+            self.idx[ins].discard(len(self.vals) - 1)
+            
             self.vals.pop()
             return True
         return False
