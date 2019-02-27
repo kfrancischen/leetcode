@@ -15,7 +15,7 @@ class Solution(object):
             if s[i] != '0':
                 result[i] = result[i-1]
 
-            if '01' <= s[i-1:i+1] <= '26':
+            if '10' <= s[i-1:i+1] <= '26':
                 result[i] += result[i-2] if i > 1 else 1
         return result[-1]
 
