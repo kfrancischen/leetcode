@@ -8,8 +8,8 @@ class Solution(object):
             return 0
 
         side_len = [map(int, row) for row in matrix]
-        for i in range(len(matrix)):
-            for j in range(len(matrix[0])):
+        for i in range(1, len(matrix)):
+            for j in range(1, len(matrix[0])):
                 if matrix[i][j] == '1':
                     side_len[i][j] = 1 + min(side_len[i-1][j], side_len[i][j-1], side_len[i-1][j-1])
 
