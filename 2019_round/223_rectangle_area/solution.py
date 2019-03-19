@@ -12,7 +12,7 @@ class Solution(object):
         :rtype: int
         """
         left_corner = [max(A, E), max(B, F)]
-        right_corner = [min(C, G)， min(D, H)]
+        right_corner = [min(C, G), min(D, H)]
         cross = 0
         if left_corner[0] < right_corner[0] and left_corner[1] < right_corner[1]:
             cross = (right_corner[0] - left_corner[0]) * (right_corner[1] - left_corner[1])
