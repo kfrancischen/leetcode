@@ -4,6 +4,7 @@ class Solution(object):
         :type nums: List[int]
         :rtype: int
         """
+        tails = [0] * len(nums)
         size = 0
         for x in nums:
             i, j = 0, size
